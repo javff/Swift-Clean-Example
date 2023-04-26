@@ -175,6 +175,7 @@
 		708FCBAD29F6A5EF009359A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				708FCBF629F913F4009359A9 /* Mappers */,
 				708FCBB429F6A6A4009359A9 /* ViewState.swift */,
 				708FCBB629F6A6C4009359A9 /* ExampleViewActions.swift */,
 				708FCBB829F6A6E8009359A9 /* SectionModel.swift */,
@@ -223,7 +224,6 @@
 		708FCBC429F6C9A5009359A9 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
-				708FCBC529F6C9B1009359A9 /* ExampleMapper.swift */,
 				708FCBC929F6D0BC009359A9 /* UseCaseInput.swift */,
 			);
 			path = Mappers;
@@ -289,6 +289,14 @@
 			isa = PBXGroup;
 			children = (
 				708FCBF229F7F78D009359A9 /* OptionsMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		708FCBF629F913F4009359A9 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				708FCBC529F6C9B1009359A9 /* ExampleMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";

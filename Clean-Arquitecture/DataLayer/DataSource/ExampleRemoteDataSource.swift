@@ -23,6 +23,12 @@ final class ExampleRemoteDataSourceImpl: ExampleRemoteDataSource {
         return Just<[LegacyOptionModel]>(data)
             .setFailureType(to: Error.self)
             .delay(for: .seconds(3), scheduler: DispatchQueue.main)
+            .map(interceptAfterDelay)
             .eraseToAnyPublisher()
+    }
+
+    private func interceptAfterDelay(_ input: [LegacyOptionModel]) -> [LegacyOptionModel] {
+        print("RemoteDataSource - Return data")
+        return input
     }
 }

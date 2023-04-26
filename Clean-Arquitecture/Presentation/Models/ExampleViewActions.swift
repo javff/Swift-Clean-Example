@@ -10,7 +10,4 @@ import Foundation
 enum ExampleViewActions {
     case renderView
     case tapRadioButton(id: String)
-    case select
-
-    case removeGiftCard
 }

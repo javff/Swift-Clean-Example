@@ -11,12 +11,12 @@ import Combine
 final class ExampleStateStoreImpl: ExampleStateStore {
 
     var statePublisher: AnyPublisher<ExampleDomainState, Never> {
-        return $domainState.eraseToAnyPublisher()
+        return $state.eraseToAnyPublisher()
     }
 
-    @Published private(set) var domainState: ExampleDomainState
+    @Published var state: ExampleDomainState
 
-    init(domainState: ExampleDomainState) {
-        self.domainState = domainState
+    init(state: ExampleDomainState) {
+        self.state = state
     }
 }

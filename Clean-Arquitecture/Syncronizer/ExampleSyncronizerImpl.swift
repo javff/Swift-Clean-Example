@@ -26,8 +26,10 @@ final class ExampleSyncronizerImpl: ExampleSyncronizer {
     func activeSnyc() {
         stateStore
             .statePublisher
+            .dropFirst()
             .sink { [weak self] state in
                 guard let self = self else { return }
+                print("DomainState is Changed")
                 self.syncState(state)
             }
             .store(in: &cancellables)
@@ -41,6 +43,7 @@ final class ExampleSyncronizerImpl: ExampleSyncronizer {
 // MARK: - Implement smell sync code
 extension ExampleSyncronizerImpl {
     func syncState(_ state: ExampleDomainState) {
+        print("------ Start sync with legacy world ------")
         syncLegacyDataIfNeeded()
 
         if state.selectedOptions.isEmpty {
@@ -57,6 +60,7 @@ extension ExampleSyncronizerImpl {
             // Nothing for now
             break
         }
+        print("------ End sync with legacy world ------")
     }
 
     func syncLegacyDataIfNeeded() {
@@ -66,6 +70,7 @@ extension ExampleSyncronizerImpl {
                 // Nothing yet
             } receiveValue: { [weak self] data in
                 guard let self = self else { return }
+                print("Set legacy models in Legacy World")
                 self.legacyContainer.saveSelectedOptions(options: data)
             }
             .store(in: &cancellables)

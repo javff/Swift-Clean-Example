@@ -10,5 +10,7 @@ import Combine
 
 protocol ExampleStateStore: AnyObject {
     var statePublisher: AnyPublisher<ExampleDomainState, Never> { get }
+
+    var state: ExampleDomainState { get set }
 }
 

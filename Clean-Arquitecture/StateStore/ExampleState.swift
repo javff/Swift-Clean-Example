@@ -10,7 +10,7 @@ import Foundation
 struct ExampleDomainState {
     let currentId: Int
     let mode: Mode
-    let selectedOptions: [String]
+    var selectedOptions: [String]
 }
 
 enum Mode {

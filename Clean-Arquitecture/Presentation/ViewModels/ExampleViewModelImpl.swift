@@ -54,7 +54,6 @@ final class ExampleViewModelImpl: ExampleViewModel {
             }
             .assign(to: \.statePublished, on: self)
             .store(in: &cancellables)
-
     }
 
     private func reloadScreen(id: String) {

@@ -18,11 +18,8 @@ final class ExampleActionReducerImpl: ExampleActionReducer {
             state = .loading
             return .loadNewInfo
         case .tapRadioButton(let id):
+            state = .loading
             return .reloadInfo(id)
-        case .select:
-            return .loadNewInfo
-        case .removeGiftCard:
-            return .loadNewInfo
         }
     }
 }

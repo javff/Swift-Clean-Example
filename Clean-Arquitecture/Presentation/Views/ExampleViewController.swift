@@ -72,7 +72,7 @@ extension ExampleViewController {
 // MARK: - Update UI
 extension ExampleViewController {
     func renderState(state: ExampleViewState) {
-        print(state)
+        print("View render state: \(state)")
         switch state {
         case .void: break
 
