@@ -9,18 +9,19 @@ import Foundation
 
 protocol MemoryStorage: AnyObject {
     func save<T>(key: String, value: T)
-    func get<T>(key: String) -> T
+    func get<T>(key: String) -> T?
 }
 
 final class MemoryStorageImpl: MemoryStorage {
+
+    private var storage: [String: Any] = [:]
     func save<T>(key: String, value: T) {
-        // nothing
-        print("guardando data en local")
+        print("MemoryStorage - save legacy data model in local")
+        storage[key] = value
     }
 
-    func get<T>(key: String) -> T {
-        fatalError("not yet")
+    func get<T>(key: String) -> T? {
+        guard let value = storage[key] as? T else { return nil }
+        return value
     }
-
-
 }

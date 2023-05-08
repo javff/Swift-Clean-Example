@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class legacyImpl {
+final class LegacyImpl {
     var options: [LegacyOptionModel] = [
         LegacyOptionModel(optionId: "1", name: "test1", price: 1),
         LegacyOptionModel(optionId: "2", name: "test2", price: 2),
@@ -23,7 +23,7 @@ final class legacyImpl {
     }
 }
 
-extension legacyImpl: LegacyContainer {
+extension LegacyImpl: LegacyContainer {
 
     var selectedOptions: [String] {
         return calculatedOptions

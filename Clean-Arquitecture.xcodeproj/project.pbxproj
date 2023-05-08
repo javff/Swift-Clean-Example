@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70163E0C29FAA86F00E58BED /* AddressInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70163E0B29FAA86F00E58BED /* AddressInfoModel.swift */; };
+		70163E0E29FAA88A00E58BED /* AddressInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70163E0D29FAA88A00E58BED /* AddressInfoView.swift */; };
+		70163E1029FAA89200E58BED /* AddressInfoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70163E0F29FAA89200E58BED /* AddressInfoSectionController.swift */; };
+		70163E1329FAAD4400E58BED /* DeliveryGroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70163E1229FAAD4400E58BED /* DeliveryGroupsModel.swift */; };
+		70163E1529FAADAE00E58BED /* DeliveryGroupsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70163E1429FAADAE00E58BED /* DeliveryGroupsSectionController.swift */; };
+		70163E1729FAADBC00E58BED /* DeliveryGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70163E1629FAADBC00E58BED /* DeliveryGroupsView.swift */; };
+		70163E202A0267B600E58BED /* DeliveryOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70163E1F2A0267B600E58BED /* DeliveryOptionView.swift */; };
+		70163E232A026B3E00E58BED /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70163E222A026B3E00E58BED /* UIView+TapGesture.swift */; };
 		708FCB9429F6A583009359A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FCB9329F6A583009359A9 /* AppDelegate.swift */; };
 		708FCB9629F6A583009359A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FCB9529F6A583009359A9 /* SceneDelegate.swift */; };
 		708FCB9829F6A583009359A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FCB9729F6A583009359A9 /* ViewController.swift */; };
@@ -43,9 +51,32 @@
 		708FCBF129F7F74F009359A9 /* ExampleRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FCBF029F7F74F009359A9 /* ExampleRemoteDataSource.swift */; };
 		708FCBF329F7F78D009359A9 /* OptionsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FCBF229F7F78D009359A9 /* OptionsMapper.swift */; };
 		708FCBF529F7FA17009359A9 /* ExampleLocalStorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FCBF429F7FA17009359A9 /* ExampleLocalStorageDataSource.swift */; };
+		70E3FB3229FA8BC6007D574E /* DiffableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB2429FA8BC6007D574E /* DiffableModel.swift */; };
+		70E3FB3329FA8BC6007D574E /* ListAdapter+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB2629FA8BC6007D574E /* ListAdapter+Loader.swift */; };
+		70E3FB3429FA8BC6007D574E /* ListAdapterUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB2729FA8BC6007D574E /* ListAdapterUpdater.swift */; };
+		70E3FB3629FA8BC6007D574E /* ListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB2929FA8BC6007D574E /* ListAdapter.swift */; };
+		70E3FB3729FA8BC6007D574E /* BaseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB2B29FA8BC6007D574E /* BaseSection.swift */; };
+		70E3FB3829FA8BC6007D574E /* BaseSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB2C29FA8BC6007D574E /* BaseSectionController.swift */; };
+		70E3FB3929FA8BC6007D574E /* SectionTypeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB2D29FA8BC6007D574E /* SectionTypeFactory.swift */; };
+		70E3FB3A29FA8BC6007D574E /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB2F29FA8BC6007D574E /* ListView.swift */; };
+		70E3FB3B29FA8BC6007D574E /* ListViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB3029FA8BC6007D574E /* ListViewConfiguration.swift */; };
+		70E3FB3C29FA8BC6007D574E /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB3129FA8BC6007D574E /* ContainerView.swift */; };
+		70E3FB3F29FA8C68007D574E /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB3E29FA8C68007D574E /* SectionType.swift */; };
+		70E3FB6B29FA9DC8007D574E /* SectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB6A29FA9DC8007D574E /* SectionFactory.swift */; };
+		70E3FB6E29FAA019007D574E /* DeliveryOptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB6D29FAA019007D574E /* DeliveryOptionsModel.swift */; };
+		70E3FB7029FAA044007D574E /* DeliveryOptionsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB6F29FAA044007D574E /* DeliveryOptionsSectionController.swift */; };
+		70E3FB7229FAA0F4007D574E /* DeliveryOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FB7129FAA0F4007D574E /* DeliveryOptionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70163E0B29FAA86F00E58BED /* AddressInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInfoModel.swift; sourceTree = "<group>"; };
+		70163E0D29FAA88A00E58BED /* AddressInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInfoView.swift; sourceTree = "<group>"; };
+		70163E0F29FAA89200E58BED /* AddressInfoSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInfoSectionController.swift; sourceTree = "<group>"; };
+		70163E1229FAAD4400E58BED /* DeliveryGroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryGroupsModel.swift; sourceTree = "<group>"; };
+		70163E1429FAADAE00E58BED /* DeliveryGroupsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryGroupsSectionController.swift; sourceTree = "<group>"; };
+		70163E1629FAADBC00E58BED /* DeliveryGroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryGroupsView.swift; sourceTree = "<group>"; };
+		70163E1F2A0267B600E58BED /* DeliveryOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOptionView.swift; sourceTree = "<group>"; };
+		70163E222A026B3E00E58BED /* UIView+TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGesture.swift"; sourceTree = "<group>"; };
 		708FCB9029F6A583009359A9 /* Clean-Arquitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clean-Arquitecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		708FCB9329F6A583009359A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		708FCB9529F6A583009359A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +115,21 @@
 		708FCBF029F7F74F009359A9 /* ExampleRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRemoteDataSource.swift; sourceTree = "<group>"; };
 		708FCBF229F7F78D009359A9 /* OptionsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsMapper.swift; sourceTree = "<group>"; };
 		708FCBF429F7FA17009359A9 /* ExampleLocalStorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleLocalStorageDataSource.swift; sourceTree = "<group>"; };
+		70E3FB2429FA8BC6007D574E /* DiffableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffableModel.swift; sourceTree = "<group>"; };
+		70E3FB2629FA8BC6007D574E /* ListAdapter+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListAdapter+Loader.swift"; sourceTree = "<group>"; };
+		70E3FB2729FA8BC6007D574E /* ListAdapterUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAdapterUpdater.swift; sourceTree = "<group>"; };
+		70E3FB2929FA8BC6007D574E /* ListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAdapter.swift; sourceTree = "<group>"; };
+		70E3FB2B29FA8BC6007D574E /* BaseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSection.swift; sourceTree = "<group>"; };
+		70E3FB2C29FA8BC6007D574E /* BaseSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSectionController.swift; sourceTree = "<group>"; };
+		70E3FB2D29FA8BC6007D574E /* SectionTypeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTypeFactory.swift; sourceTree = "<group>"; };
+		70E3FB2F29FA8BC6007D574E /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		70E3FB3029FA8BC6007D574E /* ListViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewConfiguration.swift; sourceTree = "<group>"; };
+		70E3FB3129FA8BC6007D574E /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		70E3FB3E29FA8C68007D574E /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
+		70E3FB6A29FA9DC8007D574E /* SectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFactory.swift; sourceTree = "<group>"; };
+		70E3FB6D29FAA019007D574E /* DeliveryOptionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOptionsModel.swift; sourceTree = "<group>"; };
+		70E3FB6F29FAA044007D574E /* DeliveryOptionsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOptionsSectionController.swift; sourceTree = "<group>"; };
+		70E3FB7129FAA0F4007D574E /* DeliveryOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOptionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +143,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70163E0A29FAA83D00E58BED /* AddressInfo */ = {
+			isa = PBXGroup;
+			children = (
+				70163E0B29FAA86F00E58BED /* AddressInfoModel.swift */,
+				70163E0D29FAA88A00E58BED /* AddressInfoView.swift */,
+				70163E0F29FAA89200E58BED /* AddressInfoSectionController.swift */,
+			);
+			path = AddressInfo;
+			sourceTree = "<group>";
+		};
+		70163E1129FAAD0F00E58BED /* DeliveryGroups */ = {
+			isa = PBXGroup;
+			children = (
+				70163E1229FAAD4400E58BED /* DeliveryGroupsModel.swift */,
+				70163E1429FAADAE00E58BED /* DeliveryGroupsSectionController.swift */,
+				70163E1629FAADBC00E58BED /* DeliveryGroupsView.swift */,
+			);
+			path = DeliveryGroups;
+			sourceTree = "<group>";
+		};
+		70163E212A026B2B00E58BED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70163E222A026B3E00E58BED /* UIView+TapGesture.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		708FCB8729F6A583009359A9 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +230,7 @@
 		708FCBA929F6A5B8009359A9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				70E3FB1A29FA8BA3007D574E /* Core */,
 				708FCBAD29F6A5EF009359A9 /* Models */,
 				708FCBAF29F6A5FE009359A9 /* ViewModels */,
 				708FCBAE29F6A5F7009359A9 /* Views */,
@@ -175,6 +250,7 @@
 		708FCBAD29F6A5EF009359A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				708FCBF629F913F4009359A9 /* Mappers */,
 				708FCBB429F6A6A4009359A9 /* ViewState.swift */,
 				708FCBB629F6A6C4009359A9 /* ExampleViewActions.swift */,
 				708FCBB829F6A6E8009359A9 /* SectionModel.swift */,
@@ -188,6 +264,8 @@
 		708FCBAE29F6A5F7009359A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				70163E212A026B2B00E58BED /* Extensions */,
+				70E3FB3D29FA8C61007D574E /* Sections */,
 				708FCBAB29F6A5EB009359A9 /* ExampleViewController.swift */,
 			);
 			path = Views;
@@ -223,7 +301,6 @@
 		708FCBC429F6C9A5009359A9 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
-				708FCBC529F6C9B1009359A9 /* ExampleMapper.swift */,
 				708FCBC929F6D0BC009359A9 /* UseCaseInput.swift */,
 			);
 			path = Mappers;
@@ -291,6 +368,86 @@
 				708FCBF229F7F78D009359A9 /* OptionsMapper.swift */,
 			);
 			path = Mappers;
+			sourceTree = "<group>";
+		};
+		708FCBF629F913F4009359A9 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				708FCBC529F6C9B1009359A9 /* ExampleMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		70E3FB1A29FA8BA3007D574E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				70E3FB2529FA8BC6007D574E /* Adapter */,
+				70E3FB2329FA8BC6007D574E /* Model */,
+				70E3FB2A29FA8BC6007D574E /* Sections */,
+				70E3FB2E29FA8BC6007D574E /* Views */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		70E3FB2329FA8BC6007D574E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70E3FB2429FA8BC6007D574E /* DiffableModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70E3FB2529FA8BC6007D574E /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				70E3FB2629FA8BC6007D574E /* ListAdapter+Loader.swift */,
+				70E3FB2729FA8BC6007D574E /* ListAdapterUpdater.swift */,
+				70E3FB2929FA8BC6007D574E /* ListAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		70E3FB2A29FA8BC6007D574E /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				70E3FB2B29FA8BC6007D574E /* BaseSection.swift */,
+				70E3FB2C29FA8BC6007D574E /* BaseSectionController.swift */,
+				70E3FB2D29FA8BC6007D574E /* SectionTypeFactory.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		70E3FB2E29FA8BC6007D574E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70E3FB2F29FA8BC6007D574E /* ListView.swift */,
+				70E3FB3029FA8BC6007D574E /* ListViewConfiguration.swift */,
+				70E3FB3129FA8BC6007D574E /* ContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		70E3FB3D29FA8C61007D574E /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				70163E1129FAAD0F00E58BED /* DeliveryGroups */,
+				70E3FB6C29FAA003007D574E /* DeliveryOptions */,
+				70163E0A29FAA83D00E58BED /* AddressInfo */,
+				70E3FB3E29FA8C68007D574E /* SectionType.swift */,
+				70E3FB6A29FA9DC8007D574E /* SectionFactory.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		70E3FB6C29FAA003007D574E /* DeliveryOptions */ = {
+			isa = PBXGroup;
+			children = (
+				70E3FB6D29FAA019007D574E /* DeliveryOptionsModel.swift */,
+				70E3FB6F29FAA044007D574E /* DeliveryOptionsSectionController.swift */,
+				70E3FB7129FAA0F4007D574E /* DeliveryOptionsView.swift */,
+				70163E1F2A0267B600E58BED /* DeliveryOptionView.swift */,
+			);
+			path = DeliveryOptions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,22 +525,38 @@
 				708FCBDA29F7C265009359A9 /* LegacyOptionModel.swift in Sources */,
 				708FCBB129F6A61F009359A9 /* ExampleViewModel.swift in Sources */,
 				708FCBB529F6A6A4009359A9 /* ViewState.swift in Sources */,
+				70E3FB6B29FA9DC8007D574E /* SectionFactory.swift in Sources */,
 				708FCBD829F7C0D6009359A9 /* LegacyImpl.swift in Sources */,
+				70163E1029FAA89200E58BED /* AddressInfoSectionController.swift in Sources */,
 				708FCBB929F6A6E8009359A9 /* SectionModel.swift in Sources */,
+				70E3FB3229FA8BC6007D574E /* DiffableModel.swift in Sources */,
 				708FCBDC29F7C2E3009359A9 /* ExampleSyncronizer.swift in Sources */,
+				70E3FB7229FAA0F4007D574E /* DeliveryOptionsView.swift in Sources */,
+				70163E0C29FAA86F00E58BED /* AddressInfoModel.swift in Sources */,
 				708FCBBB29F6C311009359A9 /* ExampleEffects.swift in Sources */,
 				708FCBC629F6C9B1009359A9 /* ExampleMapper.swift in Sources */,
+				70163E1329FAAD4400E58BED /* DeliveryGroupsModel.swift in Sources */,
+				70163E1529FAADAE00E58BED /* DeliveryGroupsSectionController.swift in Sources */,
+				70E3FB3929FA8BC6007D574E /* SectionTypeFactory.swift in Sources */,
 				708FCBCE29F6DA6A009359A9 /* ReloadUseCase.swift in Sources */,
+				70163E202A0267B600E58BED /* DeliveryOptionView.swift in Sources */,
+				70E3FB3329FA8BC6007D574E /* ListAdapter+Loader.swift in Sources */,
 				708FCBCA29F6D0BC009359A9 /* UseCaseInput.swift in Sources */,
+				70E3FB3629FA8BC6007D574E /* ListAdapter.swift in Sources */,
+				70E3FB7029FAA044007D574E /* DeliveryOptionsSectionController.swift in Sources */,
+				70E3FB3429FA8BC6007D574E /* ListAdapterUpdater.swift in Sources */,
 				708FCBC329F6C983009359A9 /* ExampleUseCaseImpl.swift in Sources */,
+				70163E1729FAADBC00E58BED /* DeliveryGroupsView.swift in Sources */,
 				708FCBE329F7DC76009359A9 /* ExampleState.swift in Sources */,
 				708FCBB329F6A62A009359A9 /* ExampleViewModelImpl.swift in Sources */,
+				70E3FB3C29FA8BC6007D574E /* ContainerView.swift in Sources */,
 				708FCBD629F7C0C1009359A9 /* LegacyContainer.swift in Sources */,
 				708FCBD329F7C080009359A9 /* ExampleStateStore.swift in Sources */,
 				708FCBEF29F7F6D9009359A9 /* OptionsRepositoryImpl.swift in Sources */,
 				708FCBED29F7F696009359A9 /* OptionsRepository.swift in Sources */,
 				708FCBB729F6A6C4009359A9 /* ExampleViewActions.swift in Sources */,
 				708FCBF529F7FA17009359A9 /* ExampleLocalStorageDataSource.swift in Sources */,
+				70E3FB3729FA8BC6007D574E /* BaseSection.swift in Sources */,
 				708FCBF129F7F74F009359A9 /* ExampleRemoteDataSource.swift in Sources */,
 				708FCBE929F7F4EE009359A9 /* ExampleLocalDataSource.swift in Sources */,
 				708FCBC829F6CBDD009359A9 /* ExampleReducer.swift in Sources */,
@@ -391,11 +564,18 @@
 				708FCBBE29F6C90E009359A9 /* ExampleUseCase.swift in Sources */,
 				708FCBDE29F7C347009359A9 /* ExampleSyncronizerImpl.swift in Sources */,
 				708FCBAC29F6A5EB009359A9 /* ExampleViewController.swift in Sources */,
+				70E3FB3F29FA8C68007D574E /* SectionType.swift in Sources */,
 				708FCB9429F6A583009359A9 /* AppDelegate.swift in Sources */,
+				70E3FB3829FA8BC6007D574E /* BaseSectionController.swift in Sources */,
 				708FCB9629F6A583009359A9 /* SceneDelegate.swift in Sources */,
 				708FCBE629F7F2A3009359A9 /* MemoryStorage.swift in Sources */,
+				70163E0E29FAA88A00E58BED /* AddressInfoView.swift in Sources */,
+				70E3FB3A29FA8BC6007D574E /* ListView.swift in Sources */,
+				70163E232A026B3E00E58BED /* UIView+TapGesture.swift in Sources */,
 				708FCBE129F7CE0D009359A9 /* ExampleStateStoreImpl.swift in Sources */,
+				70E3FB3B29FA8BC6007D574E /* ListViewConfiguration.swift in Sources */,
 				708FCBCC29F6D7D5009359A9 /* ExampleViewDataSource.swift in Sources */,
+				70E3FB6E29FAA019007D574E /* DeliveryOptionsModel.swift in Sources */,
 				708FCBF329F7F78D009359A9 /* OptionsMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

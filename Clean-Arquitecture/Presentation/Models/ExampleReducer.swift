@@ -18,11 +18,19 @@ final class ExampleActionReducerImpl: ExampleActionReducer {
             state = .loading
             return .loadNewInfo
         case .tapRadioButton(let id):
+            state = .loading
             return .reloadInfo(id)
-        case .select:
-            return .loadNewInfo
-        case .removeGiftCard:
-            return .loadNewInfo
+        case let .tapDeliveryOption(selected: option, model: model, id: identifier):
+            let newModel = DeliveryOptionsModel(
+                selectedOption: option,
+                options: model.options
+            )
+            let newSection = BaseSectionData(
+                identifier: BaseSectionIdentifier(id: identifier, type: SectionType.deliveryOptions.rawValue),
+                data: newModel
+            )
+            state = .update(section: newSection)
+            return .openOption(option.kind)
         }
     }
 }

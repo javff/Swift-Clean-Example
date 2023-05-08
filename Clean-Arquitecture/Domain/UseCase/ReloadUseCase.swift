@@ -16,7 +16,7 @@ final class ReloadUseCaseImpl: ReloadUseCase {
     func execute(id: String) -> AnyPublisher<ExampleDomainModel, Error> {
         return Just<ExampleDomainModel>(
             .init(
-                id: "test-id",
+                id: id,
                 title: "Titulo Principal",
                 options: ["data recargada Option1", "data recargada Option2", "Option3"],
                 price: 25

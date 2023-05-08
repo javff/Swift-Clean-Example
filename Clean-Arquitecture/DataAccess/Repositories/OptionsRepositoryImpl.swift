@@ -13,7 +13,6 @@ final class OptionsRepositoryImpl: OptionsRepository {
     private let remoteDataSource: ExampleRemoteDataSource
     private let localDataSource: ExampleLocalStorageDataSource
     private let mapper: OptionsMapper
-    private var cancellables = Set<AnyCancellable>()
 
     init(remoteDataSource: ExampleRemoteDataSource,
          localDataSource: ExampleLocalStorageDataSource,

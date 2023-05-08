@@ -15,7 +15,6 @@ final class ExampleViewModelImpl: ExampleViewModel {
     }
 
     @Published private(set) var statePublished: ExampleViewState = .void
-
     //    MARK: - Dependencies
     private let reducer: ExampleActionReducer
     private let mapper: ExampleMapper
@@ -39,9 +38,10 @@ final class ExampleViewModelImpl: ExampleViewModel {
         switch sideEffect {
         case .loadNewInfo:
             self.loadScreen()
-            
         case .reloadInfo(let id):
             self.reloadScreen(id: id)
+        case .openOption(let kind):
+            self.openKindOption(kind)
         }
     }
 
@@ -54,7 +54,6 @@ final class ExampleViewModelImpl: ExampleViewModel {
             }
             .assign(to: \.statePublished, on: self)
             .store(in: &cancellables)
-
     }
 
     private func reloadScreen(id: String) {
@@ -66,5 +65,10 @@ final class ExampleViewModelImpl: ExampleViewModel {
             }
             .assign(to: \.statePublished, on: self)
             .store(in: &cancellables)
+    }
+
+    private func openKindOption(_ kind: DeliveryOptionKindModel) {
+        print("show new screen \(kind)")
+        // router.navigateTo(kind, mode: .present)
     }
 }

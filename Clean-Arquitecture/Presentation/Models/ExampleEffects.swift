@@ -10,4 +10,5 @@ import Foundation
 enum ExampleEffects {
     case loadNewInfo
     case reloadInfo(_ id: String)
+    case openOption(_ kind: DeliveryOptionKindModel)
 }
