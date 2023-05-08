@@ -7,12 +7,28 @@
 
 import Foundation
 
-enum ExampleViewState {
+enum ExampleViewState: Equatable {
     case void
     case loading
     case empty
     case error(_ error: ViewError)
-    case render(sections: [SectionModel])
+    case render(sections: [BaseSectionData])
+    case update(section: BaseSectionData)
+
+    static func == (lhs: ExampleViewState, rhs: ExampleViewState) -> Bool {
+        switch (lhs, rhs) {
+        case (.void, .void),
+             (.loading, .loading),
+             (.empty, .empty):
+            return true
+        case let (.error(lhsError), .error(rhsError)):
+            return lhsError == rhsError
+        case let (.render(lhsSections), .render(rhsSections)):
+            return lhsSections == rhsSections
+        default:
+            return false
+        }
+    }
 }
 
 enum ViewError: Error {

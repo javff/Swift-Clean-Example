@@ -13,8 +13,25 @@ final class ExampleViewController: UIViewController {
     private let viewModel: ExampleViewModel
     private var cancellables = Set<AnyCancellable>()
 
-    private let tableView = UITableView()
-    private var tableDataSource: MyDataSource?
+    lazy var adapter: ListAdapter = {
+        let factory = SectionFactory(
+            responder: viewModel
+        )
+        let adapter = ListAdapter(sectionTypeFactory: factory)
+        return adapter
+    }()
+
+    let listView: ListView = {
+        let view = ListView(configuration: .init(spacing: 30, lateralSpacing: 15))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    let activityView: UIActivityIndicatorView = {
+        let activityView = UIActivityIndicatorView(style: .large)
+        activityView.translatesAutoresizingMaskIntoConstraints = false
+        return activityView
+    }()
 
     init(viewModel: ExampleViewModel) {
         self.viewModel = viewModel
@@ -28,30 +45,27 @@ final class ExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        configureDataSource()
-        view.backgroundColor = .red
+        setupListView()
         setupBindings()
         viewModel.sendAction(.renderView)
     }
 
     private func setupView() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(tableView)
+        view.backgroundColor = .systemBackground
+        view.addSubview(listView)
+        view.addSubview(activityView)
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            listView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            listView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            listView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            listView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            activityView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
 
-    func configureDataSource() {
-        tableDataSource = MyDataSource(tableView: tableView, cellProvider: { tableView, indexPath, model in
-            let cell = UITableViewCell()
-            cell.textLabel?.text = model.description
-            return cell
-        })
-        tableView.delegate = self
+    private func setupListView() {
+        adapter.listView = listView
     }
 }
 
@@ -59,6 +73,7 @@ extension ExampleViewController {
     func setupBindings() {
         viewModel
             .viewState
+            .removeDuplicates()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] state in
                 guard let self = self else { return }
@@ -76,35 +91,24 @@ extension ExampleViewController {
         switch state {
         case .void: break
 
-        case .loading: break
+        case .loading:
+            activityView.startAnimating()
 
         case .empty: break
 
         case .render(let sections):
-            self.renderTable(sections: sections)
+            activityView.stopAnimating()
+            self.adapter.loadSections(sections)
         case .error(let error):
             self.renderError(error)
+        case .update(section: let section):
+            activityView.stopAnimating()
+            self.adapter.updateSection(section)
         }
-    }
-
-    func renderTable(sections: [SectionModel]) {
-        var initialSnapshot = NSDiffableDataSourceSnapshot<Int, SectionModel>()
-        initialSnapshot.appendSections([0])
-        initialSnapshot.appendItems(sections)
-        tableDataSource?.apply(initialSnapshot, animatingDifferences: false)
     }
 
     func renderError(_ error: ViewError) {
 //        Nothing yet
         print("Renderiza error")
-    }
-}
-
-extension ExampleViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let model = tableDataSource?.itemIdentifier(for: indexPath) else {
-            return
-        }
-        viewModel.sendAction(.tapRadioButton(id: model.id))
     }
 }
